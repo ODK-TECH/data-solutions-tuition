@@ -157,64 +157,82 @@
 </head>
 <body class="font-inter bg-white text-gray-800">
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-white shadow-md z-50" role="navigation" aria-label="Main">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <!-- Navigation -->
-<nav class="fixed top-0 w-full bg-white shadow-md z-50" role="navigation" aria-label="Main">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center py-4">
-      
-      <!-- Inline SVG LOGO -->
-      <a href="#hero" class="flex items-center space-x-2">
-        <svg width="42" height="42" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <!-- Geometric Data/Math Symbol -->
-          <circle cx="50" cy="50" r="45" fill="none" stroke="#2563eb" stroke-width="6"/>
+  <div class="flex items-center space-x-3">
 
-          <!-- Bars for analytics -->
-          <rect x="30" y="55" width="8" height="20" rx="2" fill="#2563eb"/>
-          <rect x="46" y="45" width="8" height="30" rx="2" fill="#2563eb"/>
-          <rect x="62" y="35" width="8" height="40" rx="2" fill="#2563eb"/>
+    <!-- Light-mode logo -->
+    <div class="dark:hidden flex items-center space-x-2">
+        <svg width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- 3D geometric monogram (ODK) - Light version -->
+            <defs>
+                <linearGradient id="gradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2563EB"/>
+                    <stop offset="100%" stop-color="#60A5FA"/>
+                </linearGradient>
+            </defs>
 
-          <!-- Subtle geometric line -->
-          <path d="M25 70 L75 30" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="88" fill="url(#gradLight)" />
+
+            <!-- Abstract geometry for 3D depth -->
+            <path d="M60 60 L100 40 L140 60 L140 140 L100 160 L60 140 Z"
+                  fill="white" opacity="0.18"/>
+
+            <!-- Monogram: O D K -->
+            <path d="M70 80 A30 30 0 1 1 70 120 A30 30 0 1 1 70 80"
+                  stroke="white" stroke-width="10" fill="none"/>
+
+            <path d="M110 75 L140 100 L110 125 Z"
+                  fill="white"/>
+
+            <rect x="90" y="85" width="12" height="50" rx="3" fill="white"/>
         </svg>
 
-        <!-- Wordmark -->
-        <div class="text-xl font-bold text-primary leading-tight">
-          ODK Hub
-          <div class="text-xs font-normal tracking-wide text-gray-600">Data | Solutions | Maths Mastery</div>
+        <div>
+            <div class="text-xl font-semibold tracking-wide text-gray-900">
+                ODK Hub
+            </div>
+            <div class="text-xs text-gray-500 -mt-1">
+                Data | Solutions | Maths Mastery
+            </div>
         </div>
-      </a>
-
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex space-x-8">
-        <a href="#hero" class="hover:text-primary transition">Home</a>
-        <a href="#services" class="hover:text-primary transition">Services</a>
-        <a href="#tuition" class="hover:text-primary transition">Tuition</a>
-        <a href="#pricing" class="hover:text-primary transition">Pricing</a>
-        <a href="#faq" class="hover:text-primary transition">FAQ</a>
-        <a href="#contact" class="hover:text-primary transition">Contact</a>
-      </div>
-
-      <!-- Mobile Button -->
-      <button class="md:hidden" id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false">
-        <i class="fas fa-bars text-primary text-xl"></i>
-        <span class="sr-only">Toggle navigation</span>
-      </button>
     </div>
 
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden pb-4 md:hidden">
-      <a href="#hero" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Home</a>
-      <a href="#services" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Services</a>
-      <a href="#tuition" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Tuition</a>
-      <a href="#pricing" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Pricing</a>
-      <a href="#faq" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">FAQ</a>
-      <a href="#contact" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Contact</a>
+    <!-- Dark-mode logo -->
+    <div class="hidden dark:flex items-center space-x-2">
+        <svg width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- 3D geometric monogram (ODK) - Dark version -->
+            <defs>
+                <linearGradient id="gradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#60A5FA"/>
+                    <stop offset="100%" stop-color="#1E40AF"/>
+                </linearGradient>
+            </defs>
+
+            <circle cx="100" cy="100" r="88" fill="url(#gradDark)" />
+
+            <!-- Abstract geometry for 3D depth -->
+            <path d="M60 60 L100 40 L140 60 L140 140 L100 160 L60 140 Z"
+                  fill="black" opacity="0.22"/>
+
+            <!-- Monogram: O D K -->
+            <path d="M70 80 A30 30 0 1 1 70 120 A30 30 0 1 1 70 80"
+                  stroke="black" stroke-width="10" fill="none"/>
+
+            <path d="M110 75 L140 100 L110 125 Z"
+                  fill="black"/>
+
+            <rect x="90" y="85" width="12" height="50" rx="3" fill="black"/>
+        </svg>
+
+        <div>
+            <div class="text-xl font-semibold tracking-wide text-white">
+                ODK Hub
+            </div>
+            <div class="text-xs text-gray-400 -mt-1">
+                Data | Solutions | Maths Mastery
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
+</div>
         <div class="hidden md:flex space-x-8">
           <a href="#hero" class="hover:text-primary transition">Home</a>
           <a href="#services" class="hover:text-primary transition">Services</a>
