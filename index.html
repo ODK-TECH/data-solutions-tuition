@@ -156,83 +156,44 @@
   </style>
 </head>
 <body class="font-inter bg-white text-gray-800">
-  <!-- Navigation -->
-  <div class="flex items-center space-x-3">
+  <!-- ODK HUB – Advanced Abstract Monogram Logo (Light + Dark built-in) -->
+<svg width="260" height="80" viewBox="0 0 260 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-    <!-- Light-mode logo -->
-    <div class="dark:hidden flex items-center space-x-2">
-        <svg width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- 3D geometric monogram (ODK) - Light version -->
-            <defs>
-                <linearGradient id="gradLight" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#2563EB"/>
-                    <stop offset="100%" stop-color="#60A5FA"/>
-                </linearGradient>
-            </defs>
+  <!-- 3D Abstract Monogram Symbol -->
+  <g transform="translate(0,5)">
+    <!-- Outer ring (O) -->
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="6"/>
+    
+    <!-- Diagonal K-style slash -->
+    <path d="M48 6 L74 30 L48 54" 
+      stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 
-            <circle cx="100" cy="100" r="88" fill="url(#gradLight)" />
+    <!-- Vertical D-spine -->
+    <path d="M18 6 V54" 
+      stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+  </g>
 
-            <!-- Abstract geometry for 3D depth -->
-            <path d="M60 60 L100 40 L140 60 L140 140 L100 160 L60 140 Z"
-                  fill="white" opacity="0.18"/>
+  <!-- Wordmark -->
+  <text x="100" y="33" font-family="Inter, sans-serif" font-size="28" font-weight="700"
+      fill="currentColor">ODK Hub</text>
 
-            <!-- Monogram: O D K -->
-            <path d="M70 80 A30 30 0 1 1 70 120 A30 30 0 1 1 70 80"
-                  stroke="white" stroke-width="10" fill="none"/>
+  <!-- Tagline -->
+  <text x="100" y="57" font-family="Inter, sans-serif" font-size="14" letter-spacing="0.5"
+      fill="currentColor">Data | Solutions | Maths Mastery</text>
 
-            <path d="M110 75 L140 100 L110 125 Z"
-                  fill="white"/>
+  <!-- Auto color for dark mode -->
+  <style>
+    svg {
+      color: #111;
+    }
+    @media (prefers-color-scheme: dark) {
+      svg {
+        color: #f4f4f4;
+      }
+    }
+  </style>
 
-            <rect x="90" y="85" width="12" height="50" rx="3" fill="white"/>
-        </svg>
-
-        <div>
-            <div class="text-xl font-semibold tracking-wide text-gray-900">
-                ODK Hub
-            </div>
-            <div class="text-xs text-gray-500 -mt-1">
-                Data | Solutions | Maths Mastery
-            </div>
-        </div>
-    </div>
-
-    <!-- Dark-mode logo -->
-    <div class="hidden dark:flex items-center space-x-2">
-        <svg width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- 3D geometric monogram (ODK) - Dark version -->
-            <defs>
-                <linearGradient id="gradDark" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#60A5FA"/>
-                    <stop offset="100%" stop-color="#1E40AF"/>
-                </linearGradient>
-            </defs>
-
-            <circle cx="100" cy="100" r="88" fill="url(#gradDark)" />
-
-            <!-- Abstract geometry for 3D depth -->
-            <path d="M60 60 L100 40 L140 60 L140 140 L100 160 L60 140 Z"
-                  fill="black" opacity="0.22"/>
-
-            <!-- Monogram: O D K -->
-            <path d="M70 80 A30 30 0 1 1 70 120 A30 30 0 1 1 70 80"
-                  stroke="black" stroke-width="10" fill="none"/>
-
-            <path d="M110 75 L140 100 L110 125 Z"
-                  fill="black"/>
-
-            <rect x="90" y="85" width="12" height="50" rx="3" fill="black"/>
-        </svg>
-
-        <div>
-            <div class="text-xl font-semibold tracking-wide text-white">
-                ODK Hub
-            </div>
-            <div class="text-xs text-gray-400 -mt-1">
-                Data | Solutions | Maths Mastery
-            </div>
-        </div>
-    </div>
-</div>
+</svg>
         <div class="hidden md:flex space-x-8">
           <a href="#hero" class="hover:text-primary transition">Home</a>
           <a href="#services" class="hover:text-primary transition">Services</a>
