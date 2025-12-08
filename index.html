@@ -156,44 +156,61 @@
   </style>
 </head>
 <body class="font-inter bg-white text-gray-800">
-  <!-- ODK HUB – Advanced Abstract Monogram Logo (Light + Dark built-in) -->
-<svg width="260" height="80" viewBox="0 0 260 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white shadow-md z-50" role="navigation" aria-label="Main">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      
+      <!-- Inline SVG LOGO -->
+      <a href="#hero" class="flex items-center space-x-2">
+        <svg width="42" height="42" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Geometric Data/Math Symbol -->
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#2563eb" stroke-width="6"/>
 
-  <!-- 3D Abstract Monogram Symbol -->
-  <g transform="translate(0,5)">
-    <!-- Outer ring (O) -->
-    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="6"/>
-    
-    <!-- Diagonal K-style slash -->
-    <path d="M48 6 L74 30 L48 54" 
-      stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Bars for analytics -->
+          <rect x="30" y="55" width="8" height="20" rx="2" fill="#2563eb"/>
+          <rect x="46" y="45" width="8" height="30" rx="2" fill="#2563eb"/>
+          <rect x="62" y="35" width="8" height="40" rx="2" fill="#2563eb"/>
 
-    <!-- Vertical D-spine -->
-    <path d="M18 6 V54" 
-      stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-  </g>
+          <!-- Subtle geometric line -->
+          <path d="M25 70 L75 30" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+        </svg>
 
-  <!-- Wordmark -->
-  <text x="100" y="33" font-family="Inter, sans-serif" font-size="28" font-weight="700"
-      fill="currentColor">ODK Hub</text>
+        <!-- Wordmark -->
+        <div class="text-xl font-bold text-primary leading-tight">
+          ODK Hub
+          <div class="text-xs font-normal tracking-wide text-gray-600">Data | Solutions | Maths Mastery</div>
+        </div>
+      </a>
 
-  <!-- Tagline -->
-  <text x="100" y="57" font-family="Inter, sans-serif" font-size="14" letter-spacing="0.5"
-      fill="currentColor">Data | Solutions | Maths Mastery</text>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#hero" class="hover:text-primary transition">Home</a>
+        <a href="#services" class="hover:text-primary transition">Services</a>
+        <a href="#tuition" class="hover:text-primary transition">Tuition</a>
+        <a href="#pricing" class="hover:text-primary transition">Pricing</a>
+        <a href="#faq" class="hover:text-primary transition">FAQ</a>
+        <a href="#contact" class="hover:text-primary transition">Contact</a>
+      </div>
 
-  <!-- Auto color for dark mode -->
-  <style>
-    svg {
-      color: #111;
-    }
-    @media (prefers-color-scheme: dark) {
-      svg {
-        color: #f4f4f4;
-      }
-    }
-  </style>
+      <!-- Mobile Button -->
+      <button class="md:hidden" id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false">
+        <i class="fas fa-bars text-primary text-xl"></i>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+    </div>
 
-</svg>
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden pb-4 md:hidden">
+      <a href="#hero" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Home</a>
+      <a href="#services" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Services</a>
+      <a href="#tuition" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Tuition</a>
+      <a href="#pricing" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Pricing</a>
+      <a href="#faq" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">FAQ</a>
+      <a href="#contact" class="block py-2 hover:text-primary transition" onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </div>
+</nav>
         <div class="hidden md:flex space-x-8">
           <a href="#hero" class="hover:text-primary transition">Home</a>
           <a href="#services" class="hover:text-primary transition">Services</a>
