@@ -1,8 +1,8 @@
-# ODK Data Solutions Hub & Math Mastery Tuition
+# ODK Solutions Hub 
 
 **Data Insights. Ace Mathematics. Succeed!**
 
-Welcome to the official website of **ODK Data Solutions Hub & Math Mastery Tuition**.  
+Welcome to the official website of **ODK Solutions Hub**.  
 We provide expert **data analysis services** and **mathematics & statistics tuition** for students and professionals.
 
 ---
@@ -18,8 +18,8 @@ We provide expert **data analysis services** and **mathematics & statistics tuit
 ### 🧮 Mathematics & Statistics Tuition
 - GRE & SAT Prep
 - A-Level & O-Level Mathematics
-- Probability & Statistics
-
+- University maths and stats courses
+- JHS/SHS mathematics 
 ---
 
 ## 💰 Pricing
