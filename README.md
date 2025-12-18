@@ -7,22 +7,42 @@ We provide expert **data analysis services** and **mathematics & statistics tuit
 
 ---
 
-## 🌟 Services
+## 🌟 SERVICES
 
-### 📊 Data Analysis Services
-- Data Cleaning
-- Dashboards
-- Predictive Analytics
-- Statistical Modeling
+### 📊 RESEARCH & DATA ANALYSIS SUPPORT
+From raw data to academic-ready insights.
 
-### 🧮 Mathematics & Statistics Tuition
-- GRE & SAT Prep
-- A-Level & O-Level Mathematics
-- University maths and stats courses
-- JHS/SHS mathematics 
+✔ Research project support
+✔ Data cleaning & analysis
+✔ Statistical interpretation
+✔ Results discussion & reporting
+✔ Academic-standard insights and visualization
+
+🧠 Designed for students, researchers, and professionals.
+
+
+### 📘 MATHEMATICS & STATISTICS TUTORING
+Structured. Result-Oriented. Professional.
+
+We provide expert mathematics tutoring tailored to international and local curricula:
+✔ GRE Quantitative Reasoning
+✔ SAT Mathematics
+✔ A-Level & O-Level Mathematics
+✔ JHS & SHS Mathematics
+✔ University Mathematics Courses
+
+📊 Clear explanations, exam-focused strategies, and measurable improvement.
 ---
 
-## 💰 Pricing
+###🎓 WHY ODK SOLUTION HUB?
+
+✔ Academic & industry-aligned expertise
+✔ Data-driven approach
+✔ Clear, ethical, and professional delivery
+✔ Trusted support for learning and research success
+
+---
+## 💰 PRICING
 - Affordable tuition packages  
 - Custom quotes for data analysis projects  
 
@@ -43,13 +63,16 @@ A: Yes, we provide custom project-based data solutions.
 ## 📞 Contact Us
 - **Phone:** +233262906203 / +233597733755  
 - **WhatsApp:** +233245051371  
-- **Email:** odk.datasolutionhub@gmail.com / odk.tuition@gmail.com  
+- **Email:** odk.datasolutionhub@gmail.com / odk.tuition@gmail.com
+- 🌐 **Website**: https://odk-tech.github.io/data-solutions-tuition/
 - **Location:** Accra • Online & In-person  
+
+---
+
+Empowering learners. Supporting research. Delivering results.
 
 ---
 
 
 
-
-
-© 2025 ODK Data Solutions Hub & Math Mastery Tuition
+© 2025 ODK Solutions Hub
