@@ -13,9 +13,13 @@ We provide expert **data analysis services** and **mathematics & statistics tuit
 From raw data to academic-ready insights.
 
 ✔ Research project support
+
 ✔ Data cleaning & analysis
+
 ✔ Statistical interpretation
+
 ✔ Results discussion & reporting
+
 ✔ Academic-standard insights and visualization
 
 🧠 Designed for students, researchers, and professionals.
