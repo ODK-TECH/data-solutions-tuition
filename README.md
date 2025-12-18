@@ -29,10 +29,15 @@ From raw data to academic-ready insights.
 Structured. Result-Oriented. Professional.
 
 We provide expert mathematics tutoring tailored to international and local curricula:
+
 ✔ GRE Quantitative Reasoning
+
 ✔ SAT Mathematics
+
 ✔ A-Level & O-Level Mathematics
+
 ✔ JHS & SHS Mathematics
+
 ✔ University Mathematics Courses
 
 📊 Clear explanations, exam-focused strategies, and measurable improvement.
@@ -41,8 +46,11 @@ We provide expert mathematics tutoring tailored to international and local curri
 ###🎓 WHY ODK SOLUTION HUB?
 
 ✔ Academic & industry-aligned expertise
+
 ✔ Data-driven approach
+
 ✔ Clear, ethical, and professional delivery
+
 ✔ Trusted support for learning and research success
 
 ---
