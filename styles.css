@@ -171,3 +171,8 @@ button:focus {
   z-index: -1;
 }
 
+
+/* Optional: hover effect for mobile links */
+#mobile-menu a:hover {
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+}
