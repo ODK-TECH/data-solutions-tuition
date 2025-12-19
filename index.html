@@ -69,29 +69,21 @@
     </button>
   </div>
 
-  <!-- Mobile Menu Container -->
-  <div id="mobile-menu-container" class="fixed inset-0 z-50 hidden md:hidden">
-    <!-- Overlay -->
-    <div id="mobile-menu-overlay" class="absolute inset-0 bg-black opacity-30"></div>
-
-    <!-- Sidebar -->
-    <div id="mobile-menu" class="absolute right-0 top-0 w-64 h-full bg-white shadow transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
-      <div class="flex justify-end p-4">
-        <button id="mobile-menu-close" class="text-gray-600 hover:text-primary text-2xl font-bold">
-          ✕
-        </button>
-      </div>
-      <nav class="flex flex-col px-6">
-        <a href="#services" class="py-3 border-b">Services</a>
-        <a href="#tuition" class="py-3 border-b">Tuition</a>
-        <a href="#pricing" class="py-3 border-b">Pricing</a>
-        <a href="#faq" class="py-3 border-b">FAQ</a>
-        <a href="#contact" class="py-3">Contact</a>
-      </nav>
+  <!-- Mobile Menu (Sliding Drawer) -->
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+    <div class="flex justify-end p-4">
+      <button id="mobile-menu-close" class="text-gray-600 hover:text-primary text-2xl font-bold">✕</button>
     </div>
+    <nav class="flex flex-col px-6">
+      <a href="#services" class="py-3 border-b">Services</a>
+      <a href="#tuition" class="py-3 border-b">Tuition</a>
+      <a href="#pricing" class="py-3 border-b">Pricing</a>
+      <a href="#faq" class="py-3 border-b">FAQ</a>
+      <a href="#contact" class="py-3">Contact</a>
+    </nav>
   </div>
 </nav>
-
+  
 <!-- HERO -->
 <section id="hero" class="min-h-screen flex items-center bg-gradient-to-br from-blue-600 to-blue-800 px-4 py-24 sm:py-32">
   <div class="max-w-3xl mx-auto text-center">
