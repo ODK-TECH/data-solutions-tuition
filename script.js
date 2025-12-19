@@ -7,28 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===============================
      MOBILE MENU TOGGLE
      =============================== */
-const menuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuClose = document.getElementById('mobile-menu-close');
+document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
 
-// Open menu
-menuButton.addEventListener('click', () => {
-  mobileMenu.classList.remove('translate-x-full');
-  mobileMenu.classList.add('translate-x-0');
-});
+  // Open sidebar
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+  });
 
-// Close menu
-function closeMobileMenu() {
-  mobileMenu.classList.remove('translate-x-0');
-  mobileMenu.classList.add('translate-x-full');
-}
+  // Close sidebar function
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('translate-x-full');
+  }
 
-// Close button
-mobileMenuClose.addEventListener('click', closeMobileMenu);
+  // Close button
+  mobileMenuClose.addEventListener('click', closeMobileMenu);
 
-// Clicking a link closes menu
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', closeMobileMenu);
+  // Close sidebar when a link is clicked
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
 });
 
   /* ===============================
