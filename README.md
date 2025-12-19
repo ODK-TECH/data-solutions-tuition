@@ -1,5 +1,6 @@
 # 🌐 ODK Solutions Hub  
 **Data Insights • Ace Mathematics • Succeed**
+[![Deploy](https://github.com/odk-tech/data-solutions-tuition/actions/workflows/deploy.yml/badge.svg)](https://github.com/odk-tech/data-solutions-tuition/actions/workflows/deploy.yml)
 
 ---
 
