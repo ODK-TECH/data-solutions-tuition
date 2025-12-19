@@ -50,6 +50,8 @@
 <nav class="fixed w-full bg-white shadow z-50">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-4">
     <a href="#hero" class="font-bold text-xl text-primary">ODK Solutions Hub</a>
+
+    <!-- Desktop Links -->
     <div class="hidden md:flex space-x-8">
       <a href="#services">Services</a>
       <a href="#tuition">Tuition</a>
@@ -57,6 +59,30 @@
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-primary border-primary">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Sidebar -->
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div class="flex justify-end p-4">
+      <button id="mobile-menu-close" class="text-gray-600 hover:text-primary">
+        ✕
+      </button>
+    </div>
+    <nav class="flex flex-col px-6">
+      <a href="#services" class="py-3 border-b">Services</a>
+      <a href="#tuition" class="py-3 border-b">Tuition</a>
+      <a href="#pricing" class="py-3 border-b">Pricing</a>
+      <a href="#faq" class="py-3 border-b">FAQ</a>
+      <a href="#contact" class="py-3">Contact</a>
+    </nav>
   </div>
 </nav>
 
