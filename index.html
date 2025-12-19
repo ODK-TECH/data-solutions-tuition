@@ -5,7 +5,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4TG1VR03Z"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-S4TG1VR03Z');
   </script>
@@ -34,8 +34,11 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    .hero { min-height: 100vh; background: linear-gradient(135deg, #2563eb, #1e40af); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease;
+    }
     .faq-item.active .faq-answer { max-height: 500px; }
     .faq-item.active i { transform: rotate(180deg); }
   </style>
@@ -58,47 +61,59 @@
 </nav>
 
 <!-- HERO -->
-<section id="hero" class=" min-h-screen
-  flex items-center
-  bg-gradient-to-br from-blue-600 to-blue-800
-  px-4
-  py-24 sm:py-32">
-  <div class="max-w-3xl">
-    <h1 class="
-  text-3xl sm:text-5xl
-  font-bold
-  leading-tight
-  text-white
-">
-  Mathematics Tutoring <br class="hidden sm:block">
-  & Research Data Analysis
-</h1>
-    <p class="
-  mt-6
-  text-base sm:text-lg
-  text-blue-100
-">
-    <p class="text-lg mb-8">We help students and researchers succeed through expert tutoring, rigorous data analysis, and clear interpretation of results.</p>
-    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-      <a class="w-full sm:w-auto px-6 py-3 text-center rounded-lg font-medium">
-    <div class="flex justify-center gap-4 flex-wrap">
-      <a href="https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub%2C%20I%20need%20assistance." class="bg-green-500 px-6 py-3 rounded-lg font-semibold">WhatsApp Us</a>
-      <a href="#contact" class="border border-white px-6 py-3 rounded-lg">Contact</a>
+<section id="hero" class="min-h-screen flex items-center bg-gradient-to-br from-blue-600 to-blue-800 px-4 py-24 sm:py-32">
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-3xl sm:text-5xl font-bold leading-tight text-white">
+      Mathematics Tutoring <br class="hidden sm:block">
+      & Research Data Analysis
+    </h1>
+
+    <p class="mt-6 text-lg text-blue-100">
+      We help students and researchers succeed through expert tutoring, rigorous data analysis, and clear interpretation of results.
+    </p>
+
+    <div class="mt-8 flex justify-center gap-4 flex-wrap">
+      <a href="https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub%2C%20I%20need%20assistance."
+         class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold">
+        WhatsApp Us
+      </a>
+      <a href="#contact"
+         class="border border-white text-white px-6 py-3 rounded-lg">
+        Contact
+      </a>
     </div>
-    <p class="mt-4 text-sm">Online & In‑Person • Trusted Academic Support</p>
+
+    <p class="mt-4 text-sm text-blue-100">
+      Online & In-Person • Trusted Academic Support
+    </p>
   </div>
 </section>
-<section class="bg-white -mt-1">
 
 <!-- SERVICES -->
 <section id="services" class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-12">Research & Data Analysis Services</h2>
     <div class="grid md:grid-cols-4 gap-8 text-center">
-      <div><i class="fas fa-broom text-primary text-4xl mb-4"></i><h3 class="font-semibold">Data Cleaning</h3><p>Preparing reliable datasets for analysis.</p></div>
-      <div><i class="fas fa-chart-line text-primary text-4xl mb-4"></i><h3 class="font-semibold">Statistical Analysis</h3><p>Accurate modeling and hypothesis testing.</p></div>
-      <div><i class="fas fa-chart-pie text-primary text-4xl mb-4"></i><h3 class="font-semibold">Visualization</h3><p>Clear charts, dashboards, and reports.</p></div>
-      <div><i class="fas fa-lightbulb text-primary text-4xl mb-4"></i><h3 class="font-semibold">Results Interpretation</h3><p>Comprehensive discussion of findings.</p></div>
+      <div>
+        <i class="fas fa-broom text-primary text-4xl mb-4"></i>
+        <h3 class="font-semibold">Data Cleaning</h3>
+        <p>Preparing reliable datasets for analysis.</p>
+      </div>
+      <div>
+        <i class="fas fa-chart-line text-primary text-4xl mb-4"></i>
+        <h3 class="font-semibold">Statistical Analysis</h3>
+        <p>Accurate modeling and hypothesis testing.</p>
+      </div>
+      <div>
+        <i class="fas fa-chart-pie text-primary text-4xl mb-4"></i>
+        <h3 class="font-semibold">Visualization</h3>
+        <p>Clear charts, dashboards, and reports.</p>
+      </div>
+      <div>
+        <i class="fas fa-lightbulb text-primary text-4xl mb-4"></i>
+        <h3 class="font-semibold">Results Interpretation</h3>
+        <p>Comprehensive discussion of findings.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -108,9 +123,21 @@
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-12">Mathematics Tutoring</h2>
     <div class="grid md:grid-cols-3 gap-8 text-center">
-      <div><i class="fas fa-graduation-cap text-primary text-4xl mb-4"></i><h3 class="font-semibold">GRE & SAT Math</h3><p>Exam‑focused strategies to boost scores.</p></div>
-      <div><i class="fas fa-school text-primary text-4xl mb-4"></i><h3 class="font-semibold">JHS & SHS Mathematics</h3><p>Strong foundations and exam confidence.</p></div>
-      <div><i class="fas fa-university text-primary text-4xl mb-4"></i><h3 class="font-semibold">University Mathematics</h3><p>Calculus, Linear Algebra, Probability, Statistics.</p></div>
+      <div>
+        <i class="fas fa-graduation-cap text-primary text-4xl mb-4"></i>
+        <h3 class="font-semibold">GRE & SAT Math</h3>
+        <p>Exam-focused strategies to boost scores.</p>
+      </div>
+      <div>
+        <i class="fas fa-school text-primary text-4xl mb-4"></i>
+        <h3 class="font-semibold">JHS & SHS Mathematics</h3>
+        <p>Strong foundations and exam confidence.</p>
+      </div>
+      <div>
+        <i class="fas fa-university text-primary text-4xl mb-4"></i>
+        <h3 class="font-semibold">University Mathematics</h3>
+        <p>Calculus, Linear Algebra, Probability, Statistics.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -136,94 +163,18 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="py-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">What Clients Say</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-        <p class="italic">“ODK Solutions Hub helped me significantly improve my GRE quantitative score. The explanations were clear and practical.”</p>
-        <p class="mt-4 font-semibold"> GRE Student</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-        <p class="italic">“The data analysis and discussion of results for my thesis were excellent and very professional.”</p>
-        <p class="mt-4 font-semibold"> Postgraduate Researcher</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-        <p class="italic">“Reliable, patient, and highly knowledgeable. My confidence in mathematics improved greatly.”</p>
-        <p class="mt-4 font-semibold"> SHS Student</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq" class="py-20">
   <div class="max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">
-      Frequently Asked Questions
-    </h2>
+    <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
 
     <div class="faq-item border-b py-4">
       <div class="flex justify-between cursor-pointer faq-question">
         Do you offer online sessions?
         <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="faq-answer">
-        Yes. All tutoring and consultations can be conducted online.
-      </div>
+      <div class="faq-answer">Yes. All tutoring and consultations can be conducted online.</div>
     </div>
-
-    <div class="faq-item border-b py-4">
-      <div class="flex justify-between cursor-pointer faq-question">
-        Who can use your data analysis services?
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="faq-answer">
-        Undergraduates, postgraduates, and professionals.
-      </div>
-    </div>
-
-    <div class="faq-item border-b py-4">
-      <div class="flex justify-between cursor-pointer faq-question">
-        Do you tutor international students?
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="faq-answer">
-        Yes. We tutor students worldwide through structured online sessions.
-      </div>
-    </div>
-
-    <div class="faq-item border-b py-4">
-      <div class="flex justify-between cursor-pointer faq-question">
-        How long does GRE/SAT prep take?
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="faq-answer">
-        Typically 6–10 weeks depending on your starting level and target score.
-      </div>
-    </div>
-
-    <div class="faq-item border-b py-4">
-      <div class="flex justify-between cursor-pointer faq-question">
-        Do you provide practice materials?
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="faq-answer">
-        Yes. All sessions include customized practice questions and mock tests.
-      </div>
-    </div>
-
-    <div class="faq-item border-b py-4">
-      <div class="flex justify-between cursor-pointer faq-question">
-        Are sessions one-on-one or group-based?
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="faq-answer">
-        We offer both. One-on-one is recommended for faster score improvement.
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -231,9 +182,19 @@
 <section id="contact" class="py-20 bg-gray-50">
   <div class="max-w-4xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
-    <p class="mb-4">Accra • Online & In‑Person</p>
-    <p class="mb-4">WhatsApp: <a href="https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub%2C%20I%20need%20assistance.">+233 245 051 371</a></p>
-    <p>Email: <a href="mailto:odk.datasolutionhub@gmail.com" class="text-primary">odk.datasolutionhub@gmail.com|odk.tuition@gmail.com</a></p>
+    <p class="mb-4">Accra • Online & In-Person</p>
+    <p class="mb-4">
+      WhatsApp:
+      <a href="https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub%2C%20I%20need%20assistance.">
+        +233 245 051 371
+      </a>
+    </p>
+    <p>
+      Email:
+      <a href="mailto:odk.datasolutionhub@gmail.com" class="text-primary">
+        odk.datasolutionhub@gmail.com | odk.tuition@gmail.com
+      </a>
+    </p>
   </div>
 </section>
 
@@ -244,15 +205,17 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('active');
+    });
   });
 </script>
-  
-  <a href="https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub%2C%20I%20need%20assistance."
+
+<a href="https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub%2C%20I%20need%20assistance."
    class="fixed bottom-5 right-5 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
    aria-label="Chat on WhatsApp">
   <i class="fab fa-whatsapp text-2xl"></i>
 </a>
-  
+
 </body>
 </html>
