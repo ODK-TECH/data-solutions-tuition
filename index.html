@@ -70,19 +70,26 @@
   </div>
 
   <!-- Mobile Menu Sidebar -->
-  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
-    <div class="flex justify-end p-4">
-      <button id="mobile-menu-close" class="text-gray-600 hover:text-primary">
-        ✕
-      </button>
+  <div id="mobile-menu" class="fixed inset-0 z-50 md:hidden flex transform translate-x-full transition-transform duration-300 ease-in-out">
+    
+    <!-- Overlay -->
+    <div id="mobile-menu-overlay" class="absolute inset-0 bg-black opacity-30"></div>
+
+    <!-- Sidebar -->
+    <div class="relative ml-auto w-64 h-full bg-white shadow-lg flex flex-col">
+      <div class="flex justify-end p-4">
+        <button id="mobile-menu-close" class="text-gray-600 hover:text-primary text-2xl font-bold">
+          ✕
+        </button>
+      </div>
+      <nav class="flex flex-col px-6">
+        <a href="#services" class="py-3 border-b">Services</a>
+        <a href="#tuition" class="py-3 border-b">Tuition</a>
+        <a href="#pricing" class="py-3 border-b">Pricing</a>
+        <a href="#faq" class="py-3 border-b">FAQ</a>
+        <a href="#contact" class="py-3">Contact</a>
+      </nav>
     </div>
-    <nav class="flex flex-col px-6">
-      <a href="#services" class="py-3 border-b">Services</a>
-      <a href="#tuition" class="py-3 border-b">Tuition</a>
-      <a href="#pricing" class="py-3 border-b">Pricing</a>
-      <a href="#faq" class="py-3 border-b">FAQ</a>
-      <a href="#contact" class="py-3">Contact</a>
-    </nav>
   </div>
 </nav>
 
