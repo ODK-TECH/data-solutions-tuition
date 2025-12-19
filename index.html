@@ -69,14 +69,13 @@
     </button>
   </div>
 
-  <!-- Mobile Menu Sidebar -->
-  <div id="mobile-menu" class="fixed inset-0 z-50 md:hidden flex transform translate-x-full transition-transform duration-300 ease-in-out">
-    
+  <!-- Mobile Menu Container -->
+  <div id="mobile-menu-container" class="fixed inset-0 z-50 hidden md:hidden">
     <!-- Overlay -->
     <div id="mobile-menu-overlay" class="absolute inset-0 bg-black opacity-30"></div>
 
     <!-- Sidebar -->
-    <div class="relative ml-auto w-64 h-full bg-white shadow-lg flex flex-col">
+    <div id="mobile-menu" class="absolute right-0 top-0 w-64 h-full bg-white shadow transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
       <div class="flex justify-end p-4">
         <button id="mobile-menu-close" class="text-gray-600 hover:text-primary text-2xl font-bold">
           ✕
