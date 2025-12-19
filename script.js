@@ -8,34 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
      MOBILE MENU TOGGLE
      =============================== */
 const menuButton = document.getElementById('mobile-menu-button');
-const mobileMenuContainer = document.getElementById('mobile-menu-container');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileMenuClose = document.getElementById('mobile-menu-close');
-const mobileOverlay = document.getElementById('mobile-menu-overlay');
 
-// Open sidebar
+// Open menu
 menuButton.addEventListener('click', () => {
-  mobileMenuContainer.classList.remove('hidden');
   mobileMenu.classList.remove('translate-x-full');
   mobileMenu.classList.add('translate-x-0');
 });
 
-// Close sidebar function
+// Close menu
 function closeMobileMenu() {
   mobileMenu.classList.remove('translate-x-0');
   mobileMenu.classList.add('translate-x-full');
-  setTimeout(() => {
-    mobileMenuContainer.classList.add('hidden');
-  }, 300); // wait for transition
 }
 
 // Close button
 mobileMenuClose.addEventListener('click', closeMobileMenu);
 
-// Overlay click closes menu
-mobileOverlay.addEventListener('click', closeMobileMenu);
-
-// Clicking links closes menu
+// Clicking a link closes menu
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', closeMobileMenu);
 });
