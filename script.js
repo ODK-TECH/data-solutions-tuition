@@ -8,25 +8,28 @@ document.addEventListener('DOMContentLoaded', () => {
      MOBILE MENU TOGGLE
      =============================== */
   const menuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
 
-  if (menuButton && mobileMenu) {
-    menuButton.addEventListener('click', () => {
-      const isOpen = !mobileMenu.classList.contains('hidden');
-      mobileMenu.classList.toggle('hidden');
-      menuButton.setAttribute('aria-expanded', String(!isOpen));
-    });
-  }
+if (menuButton && mobileMenu) {
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.add('open');
+  });
+}
 
-  function closeMobileMenu() {
-    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-      mobileMenu.classList.add('hidden');
+if (mobileMenuClose && mobileMenu) {
+  mobileMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+}
 
-      if (menuButton) {
-        menuButton.setAttribute('aria-expanded', 'false');
-      }
-    }
-  }
+// Close menu when a link is clicked
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+});
+
 
   /* ===============================
      SMOOTH SCROLLING
