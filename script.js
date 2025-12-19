@@ -1,216 +1,121 @@
-// Smooth scrolling for navigation links
-/*document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+/* =========================================================
+   ODK SOLUTIONS HUB — MAIN SCRIPT
+   ========================================================= */
 
-// Mobile menu toggle
-function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-}*/
-
-// script.js
-
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-}
-
-// FAQ Accordion
-const faqQuestions = document.querySelectorAll('.faq-question');
-
-if (faqQuestions.length > 0) {
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            answer.classList.toggle('open');
-            
-            const icon = question.querySelector('i');
-            if (icon) {
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            }
-        });
-    });
-}
-
-// Smooth scrolling for navigation links
-const navAnchors = document.querySelectorAll('a[href^="#"]');
-
-if (navAnchors.length > 0) {
-    navAnchors.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (navLinks && navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                }
-            }
-        });
-    });
-}
-
-// Form validation for contact form (if added later)
-function validateForm(form) {
-    let isValid = true;
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
-    
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            isValid = false;
-            highlightError(input);
-        } else {
-            removeErrorHighlight(input);
-        }
-    });
-    
-    return isValid;
-}
-
-function highlightError(element) {
-    element.style.borderColor = 'red';
-}
-
-function removeErrorHighlight(element) {
-    element.style.borderColor = '';
-}
-
-// Animation on scroll
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.service-card, .tuition-card, .pricing-card');
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = 0;
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(el);
-    });
-}
-
-// Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    initScrollAnimations();
-});
 
-// WhatsApp integration helper
-function initWhatsApp() {
-    const whatsappButtons = document.querySelectorAll('.btn-whatsapp');
-    
-    whatsappButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            // You can add tracking or analytics here
-            console.log('WhatsApp button clicked');
-            // The link will naturally navigate to WhatsApp
-        });
+  /* ===============================
+     MOBILE MENU TOGGLE
+     =============================== */
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
     });
-}
+  }
 
-// Initialize WhatsApp buttons
-initWhatsApp();
+  function closeMobileMenu() {
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+  }
 
-// Back to top button functionality
-function initBackToTop() {
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '↑';
-    backToTopButton.classList.add('back-to-top');
-    backToTopButton.style.display = 'none';
-    backToTopButton.style.position = 'fixed';
-    backToTopButton.style.bottom = '20px';
-    backToTopButton.style.right = '20px';
-    backToTopButton.style.zIndex = '99';
-    backToTopButton.style.border = 'none';
-    backToTopButton.style.outline = 'none';
-    backToTopButton.style.backgroundColor = 'var(--primary-blue)';
-    backToTopButton.style.color = 'white';
-    backToTopButton.style.cursor = 'pointer';
-    backToTopButton.style.padding = '15px';
-    backToTopButton.style.borderRadius = '50%';
-    backToTopButton.style.fontSize = '18px';
-    backToTopButton.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
-    
-    document.body.appendChild(backToTopButton);
-    
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+  /* ===============================
+     SMOOTH SCROLLING
+     =============================== */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const targetId = anchor.getAttribute('href');
+      if (targetId === '#') return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      e.preventDefault();
+
+      const offset = 90; // height of fixed navbar
+      const top = target.offsetTop - offset;
+
+      window.scrollTo({
+        top,
+        behavior: 'smooth'
+      });
+
+      closeMobileMenu();
     });
-    
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'none';
+  });
+
+  /* ===============================
+     FAQ ACCORDION
+     =============================== */
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.closest('.faq-item');
+      if (!item) return;
+
+      item.classList.toggle('active');
+    });
+  });
+
+  /* ===============================
+     SCROLL ANIMATIONS
+     =============================== */
+  const animatedElements = document.querySelectorAll(
+    '.service-card, .tuition-card, .pricing-card'
+  );
+
+  if ('IntersectionObserver' in window && animatedElements.length > 0) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-6');
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.15 });
+
+    animatedElements.forEach(el => {
+      el.classList.add(
+        'opacity-0',
+        'translate-y-6',
+        'transition-all',
+        'duration-700',
+        'ease-out'
+      );
+      observer.observe(el);
     });
-}
+  }
 
-// Initialize back to top button
-initBackToTop();
+  /* ===============================
+     FLOATING WHATSAPP CTA
+     =============================== */
+  const whatsappBtn = document.createElement('a');
+  whatsappBtn.href =
+    'https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub,%20I%20would%20like%20to%20inquire.';
+  whatsappBtn.target = '_blank';
+  whatsappBtn.setAttribute('aria-label', 'Chat on WhatsApp');
+  whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
 
-// Active navigation link highlighting
-function setActiveNavLink() {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (pageYOffset >= (sectionTop - 100)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-}
+  whatsappBtn.style.position = 'fixed';
+  whatsappBtn.style.bottom = '20px';
+  whatsappBtn.style.right = '20px';
+  whatsappBtn.style.width = '56px';
+  whatsappBtn.style.height = '56px';
+  whatsappBtn.style.background = '#25D366';
+  whatsappBtn.style.color = '#fff';
+  whatsappBtn.style.display = 'flex';
+  whatsappBtn.style.alignItems = 'center';
+  whatsappBtn.style.justifyContent = 'center';
+  whatsappBtn.style.borderRadius = '50%';
+  whatsappBtn.style.fontSize = '28px';
+  whatsappBtn.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+  whatsappBtn.style.zIndex = '1000';
 
-// Initialize active navigation
-setActiveNavLink();
+  document.body.appendChild(whatsappBtn);
 
-
+});
