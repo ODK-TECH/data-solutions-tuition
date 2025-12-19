@@ -7,27 +7,35 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===============================
      MOBILE MENU TOGGLE
      =============================== */
-  const menuButton = document.getElementById('mobile-menu-button');
+const menuButton = document.getElementById('mobile-menu-button');
+const mobileMenuContainer = document.getElementById('mobile-menu-container');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileMenuClose = document.getElementById('mobile-menu-close');
 const mobileOverlay = document.getElementById('mobile-menu-overlay');
 
-// Open menu
+// Open sidebar
 menuButton.addEventListener('click', () => {
+  mobileMenuContainer.classList.remove('hidden');
   mobileMenu.classList.remove('translate-x-full');
   mobileMenu.classList.add('translate-x-0');
 });
 
-// Close menu
+// Close sidebar function
 function closeMobileMenu() {
-  mobileMenu.classList.add('translate-x-full');
   mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+  setTimeout(() => {
+    mobileMenuContainer.classList.add('hidden');
+  }, 300); // wait for transition
 }
 
+// Close button
 mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+// Overlay click closes menu
 mobileOverlay.addEventListener('click', closeMobileMenu);
 
-// Close when clicking a link
+// Clicking links closes menu
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', closeMobileMenu);
 });
