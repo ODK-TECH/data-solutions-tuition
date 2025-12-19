@@ -148,3 +148,26 @@ button:focus {
 ::selection {
   background-color: var(--light-blue);
 }
+
+
+/* Mobile menu slide-in/out */
+#mobile-menu {
+  transform: translateX(100%); /* hidden by default */
+}
+
+#mobile-menu.open {
+  transform: translateX(0); /* slide in */
+}
+
+/* Optional: overlay when menu is open */
+#mobile-menu::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
