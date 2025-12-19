@@ -87,6 +87,18 @@ Absolutely. We deliver fully tailored project solutions.
 **Empowering learners. Supporting research. Delivering results.**
 
 ---
+## 🧩 Portfolio Highlights
+
+- 📈 Academic data analysis & visualization
+- 📊 Statistical modeling for research projects
+- 🎓 Mathematics tutoring platforms
+- 🤖 AI-assisted academic tools (coming soon)
+
+> This repository serves as both a **live service platform**
+> and a **professional portfolio showcase**.
+
+
+---
 
 ⭐ If you find this project useful, please consider starring the repository!
 
