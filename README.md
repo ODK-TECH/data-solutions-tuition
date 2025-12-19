@@ -73,9 +73,9 @@ A: Yes, we provide custom project-based data solutions.
 ---
 
 ## 📞 Contact Us
-- **Phone:** +233262906203 / +233597733755  
+- **Phone:** +233262906203 | +233597733755  
 - **WhatsApp:** +233245051371  
-- **Email:** odk.datasolutionhub@gmail.com / odk.tuition@gmail.com
+- **Email:** odk.datasolutionhub@gmail.com | odk.tuition@gmail.com
 - 🌐 **Website**: https://odk-tech.github.io/data-solutions-tuition/
 - **Location:** Accra • Online & In-person  
 
