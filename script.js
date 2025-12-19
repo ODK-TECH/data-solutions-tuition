@@ -10,26 +10,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileMenuClose = document.getElementById('mobile-menu-close');
+const mobileOverlay = document.getElementById('mobile-menu-overlay');
 
-if (menuButton && mobileMenu) {
-  menuButton.addEventListener('click', () => {
-    mobileMenu.classList.add('open');
-  });
-}
-
-if (mobileMenuClose && mobileMenu) {
-  mobileMenuClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-  });
-}
-
-// Close menu when a link is clicked
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-  });
+// Open menu
+menuButton.addEventListener('click', () => {
+  mobileMenu.classList.remove('translate-x-full');
+  mobileMenu.classList.add('translate-x-0');
 });
 
+// Close menu
+function closeMobileMenu() {
+  mobileMenu.classList.add('translate-x-full');
+  mobileMenu.classList.remove('translate-x-0');
+}
+
+mobileMenuClose.addEventListener('click', closeMobileMenu);
+mobileOverlay.addEventListener('click', closeMobileMenu);
+
+// Close when clicking a link
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
+});
 
   /* ===============================
      SMOOTH SCROLLING
