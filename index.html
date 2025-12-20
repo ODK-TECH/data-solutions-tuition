@@ -34,6 +34,7 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
     .faq-answer {
       max-height: 0;
       overflow: hidden;
@@ -47,10 +48,8 @@
 <body class="font-inter text-gray-800">
 
 <!-- NAVIGATION -->
-<!-- NAVIGATION -->
 <nav class="fixed w-full bg-white shadow z-50">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-4">
-    <!-- Logo -->
     <a href="#hero" class="font-bold text-xl text-primary">ODK Solutions Hub</a>
 
     <!-- Desktop Links -->
@@ -71,13 +70,11 @@
     </button>
   </div>
 
-  <!-- Mobile Menu Sidebar -->
+  <!-- Mobile Sidebar Menu -->
   <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
-    <!-- Close button -->
     <div class="flex justify-end p-4">
       <button id="mobile-menu-close" class="text-gray-600 hover:text-primary text-2xl font-bold">✕</button>
     </div>
-    <!-- Links -->
     <nav class="flex flex-col px-6">
       <a href="#services" class="py-3 border-b">Services</a>
       <a href="#tuition" class="py-3 border-b">Tuition</a>
@@ -87,7 +84,7 @@
     </nav>
   </div>
 </nav>
-  
+
 <!-- HERO -->
 <section id="hero" class="min-h-screen flex items-center bg-gradient-to-br from-blue-600 to-blue-800 px-4 py-24 sm:py-32">
   <div class="max-w-3xl mx-auto text-center">
@@ -95,11 +92,9 @@
       Mathematics Tutoring <br class="hidden sm:block">
       & Research Data Analysis
     </h1>
-
     <p class="mt-6 text-lg text-blue-100">
       We help students and researchers succeed through expert tutoring, rigorous data analysis, and clear interpretation of results.
     </p>
-
     <div class="mt-8 flex justify-center gap-4 flex-wrap">
       <a href="https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub%2C%20I%20need%20assistance."
          class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold">
@@ -110,7 +105,6 @@
         Contact
       </a>
     </div>
-
     <p class="mt-4 text-sm text-blue-100">
       Online & In-Person • Trusted Academic Support
     </p>
@@ -194,70 +188,43 @@
 <!-- FAQ -->
 <section id="faq" class="py-20">
   <div class="max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">
-      Frequently Asked Questions
-    </h2>
-
+    <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
     <div class="faq-item border-b py-4">
       <div class="flex justify-between cursor-pointer faq-question">
-        Do you offer online sessions?
-        <i class="fas fa-chevron-down"></i>
+        Do you offer online sessions? <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="faq-answer">
-        Yes. All tutoring and consultations can be conducted online.
-      </div>
+      <div class="faq-answer">Yes. All tutoring and consultations can be conducted online.</div>
     </div>
-
     <div class="faq-item border-b py-4">
       <div class="flex justify-between cursor-pointer faq-question">
-        Who can use your data analysis services?
-        <i class="fas fa-chevron-down"></i>
+        Who can use your data analysis services? <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="faq-answer">
-        Undergraduates, postgraduates, and professionals.
-      </div>
+      <div class="faq-answer">Undergraduates, postgraduates, and professionals.</div>
     </div>
-
     <div class="faq-item border-b py-4">
       <div class="flex justify-between cursor-pointer faq-question">
-        Do you tutor international students?
-        <i class="fas fa-chevron-down"></i>
+        Do you tutor international students? <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="faq-answer">
-        Yes. We tutor students worldwide through structured online sessions.
-      </div>
+      <div class="faq-answer">Yes. We tutor students worldwide through structured online sessions.</div>
     </div>
-
     <div class="faq-item border-b py-4">
       <div class="flex justify-between cursor-pointer faq-question">
-        How long does GRE/SAT prep take?
-        <i class="fas fa-chevron-down"></i>
+        How long does GRE/SAT prep take? <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="faq-answer">
-        Typically 8–10 weeks depending on your starting level and target score.
-      </div>
+      <div class="faq-answer">Typically 8–10 weeks depending on your starting level and target score.</div>
     </div>
-
     <div class="faq-item border-b py-4">
       <div class="flex justify-between cursor-pointer faq-question">
-        Do you provide practice materials?
-        <i class="fas fa-chevron-down"></i>
+        Do you provide practice materials? <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="faq-answer">
-        Yes. All sessions include customized practice questions and mock tests.
-      </div>
+      <div class="faq-answer">Yes. All sessions include customized practice questions and mock tests.</div>
     </div>
-
     <div class="faq-item border-b py-4">
       <div class="flex justify-between cursor-pointer faq-question">
-        Are sessions one-on-one or group-based?
-        <i class="fas fa-chevron-down"></i>
+        Are sessions one-on-one or group-based? <i class="fas fa-chevron-down"></i>
       </div>
-      <div class="faq-answer">
-        We offer both. One-on-one is recommended for faster score improvement.
-      </div>
+      <div class="faq-answer">We offer both. One-on-one is recommended for faster score improvement.</div>
     </div>
-
   </div>
 </section>
 
@@ -286,14 +253,39 @@
   <p>&copy; 2025 ODK Solutions Hub — Mathematics Tutoring • Research Data Analysis</p>
 </footer>
 
+<!-- Scripts -->
 <script>
+  // FAQ Accordion
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
       q.parentElement.classList.toggle('active');
     });
   });
+
+  // Mobile Menu Toggle
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+  });
+
+  mobileMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('translate-x-full');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('translate-x-full');
+    });
+  });
 </script>
 
+<!-- Floating WhatsApp -->
 <a href="https://wa.me/233245051371?text=Hello%20ODK%20Solutions%20Hub%2C%20I%20need%20assistance."
    class="fixed bottom-5 right-5 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
    aria-label="Chat on WhatsApp">
